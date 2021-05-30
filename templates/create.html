@@ -18,12 +18,11 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
-        <p>
+
             {% if errors %}
             <p style="color:red;"> {{errors.message}}</p>
             {% endif %}
-        </p>
+
         <p>{{ form.submit() }}</p>
     </form>
-<a href="{{url_for('create')}}">Créer</a>
 {% endblock %}
