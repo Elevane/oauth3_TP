@@ -122,10 +122,8 @@ def is_auth_or_token(req):
 @app.route("/home")
 @login_required
 def index():
-    print(session)
-
     if is_auth_or_token(request):
-        return render_template('index.html', title='Index')
+        return render_template('index.html', title='Index', token=session['token'])
     else:
         return redirect("login")
 

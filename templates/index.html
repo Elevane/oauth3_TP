@@ -9,6 +9,7 @@
 <body>
 {% if current_user.is_authenticated %}
   Hi {{ current_user.email }}!
+<p> Token :   {{token}}</p>
 {% endif %}
 </body>
 </html>
