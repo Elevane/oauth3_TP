@@ -133,6 +133,7 @@ def index():
 @login_required
 def logout():
     logout_user()
+    session['token'] = ""
     return redirect("/login" )
 
 
